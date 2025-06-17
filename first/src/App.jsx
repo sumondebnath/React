@@ -37,14 +37,16 @@
 /* So, Start From here to ----------------------------------------------------------------------------------------------------------- Learning */
 
 // import Clock from "./components/EventListener";
-import ClockList from "./components/ClockList";
+// import ClockList from "./components/ClockList";
+import Form from "./components/Form";
 
 function App() {
-  const quantities = [1, 2, 3];
+  // const quantities = [1, 2, 3];
   return (
     <div>
       {/* <Clock locale="en-US" /> */}
-      <ClockList quantities={quantities} />
+      {/* <ClockList quantities={quantities} /> */}
+      <Form />
     </div>
   );
 }
