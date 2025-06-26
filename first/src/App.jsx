@@ -38,16 +38,36 @@
 
 // import Clock from "./components/EventListener";
 // import ClockList from "./components/ClockList";
-import Form from "./components/Form";
+// import Form from "./components/Form";
+// import Text from "./components/inheritance/Text";
+
+import Emoji from "./components/composition/Emoji";
+import Text from "./components/composition/Text";
+import Bracket from "./components/composition/Bracket";
 
 function App() {
   // const quantities = [1, 2, 3];
+  // return (
+  //   <div>
+  //     {/* <Clock locale="en-US" /> */}
+  //     {/* <ClockList quantities={quantities} /> */}
+  //     {/* <Form /> */}
+
+  //     {/* <Text/> */}
+
+  //   </div>
+  // );
+
   return (
-    <div>
-      {/* <Clock locale="en-US" /> */}
-      {/* <ClockList quantities={quantities} /> */}
-      <Form />
-    </div>
+    <Emoji>
+      {({ addEmoji }) => (
+        <Bracket>
+          {({ addBracket }) => (
+            <Text addEmoji={addEmoji} addBracket={addBracket} />
+          )}
+        </Bracket>
+      )}
+    </Emoji>
   );
 }
 
