@@ -45,6 +45,11 @@ import Emoji from "./components/composition/Emoji";
 import Text from "./components/composition/Text";
 import Bracket from "./components/composition/Bracket";
 
+import ClickCounter from "./components/render props/ClickCounter";
+import HoverCounter from "./components/render props/HoverCounter";
+import User from "./components/render props/User";
+import Counter from "./components/render props/Counter";
+
 function App() {
   // const quantities = [1, 2, 3];
   // return (
@@ -58,16 +63,42 @@ function App() {
   //   </div>
   // );
 
+  // return (
+  //   <Emoji>
+  //     {({ addEmoji }) => (
+  //       <Bracket>
+  //         {({ addBracket }) => (
+  //           <Text addEmoji={addEmoji} addBracket={addBracket} />
+  //         )}
+  //       </Bracket>
+  //     )}
+  //   </Emoji>
+  // );
+
   return (
-    <Emoji>
-      {({ addEmoji }) => (
-        <Bracket>
-          {({ addBracket }) => (
-            <Text addEmoji={addEmoji} addBracket={addBracket} />
-          )}
-        </Bracket>
-      )}
-    </Emoji>
+    <div className="App">
+      {/* <ClickCounter /> */}
+      {/* <HoverCounter /> */}
+      <User render={(isLogedIn) => (isLogedIn ? "Sumon" : "guest")} />
+
+      <Counter
+        render={(count, incrementCount) => (
+          <ClickCounter count={count} incrementCount={incrementCount} />
+        )}
+      />
+
+      <Counter
+        render={(count, incrementCount) => (
+          <HoverCounter count={count} incrementCount={incrementCount} />
+        )}
+      />
+
+      {/* <Counter>
+        {(count, incrementCount) => (
+          <HoverCounter count={count} incrementCount={incrementCount} />
+        )}
+      </Counter> */}
+    </div>
   );
 }
 
