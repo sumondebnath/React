@@ -4,6 +4,8 @@ import Todos from "./components/UseState";
 import Counter from "./components/Counter";
 import MyClassComponent from "./components/classComponents/MyClassComponent";
 import MyComponent from "./components/MyComponent";
+import LayoutComponentOne from "./components/customHook/LayoutComponentOne";
+import LayoutComponentTwo from "./components/customHook/LayoutComponentTwo";
 import { useState } from "react";
 
 function App() {
@@ -33,6 +35,10 @@ function App() {
           {show ? "hide post" : "show post"}
         </button>
       </p>
+
+      <h1>Learning abaout Custom Hook!</h1>
+      <LayoutComponentOne />
+      <LayoutComponentTwo />
     </div>
   );
 }
