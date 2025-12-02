@@ -12,7 +12,7 @@ function App() {
   const [show, setShow] = useState(true);
   return (
     <div>
-      <h1 className="font-semibold text-4xl text-cyan-700 ">Sumon Debnath</h1>
+      <h1 className="font-semibold  text-cyan-700  custom-h1">Sumon Debnath</h1>
       <Todo />
       <br />
       <br />
@@ -21,14 +21,14 @@ function App() {
       <br />
       <Counter />
 
-      <h1>Use Effect Class Component : </h1>
+      <h2 className="custom-h2 ">Use Effect Class Component : </h2>
       {/* <MyClassComponent /> */}
 
       <h1>Use Effect Functional Component : </h1>
       <div>{show && <MyComponent />}</div>
       <p>
         <button
-          className="border-2 shadow-xs"
+          className="btn-light"
           type="button"
           onClick={() => setShow((prevShow) => !prevShow)}
         >

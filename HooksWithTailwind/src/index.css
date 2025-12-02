@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@layer components {
+  /* Group-Utilitis */
+  .btn-light {
+    @apply rounded-2xl bg-sky-300 ring-2 text-white border-2 shadow-xs px-4 py-1 text-2xl hover:bg-white hover:text-black font-semibold;
+    @apply rounded-3xl;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-7xl;
+  }
+}
+
+@layer utilities {
+  .custom-h1 {
+    /* @apply font-size : 5px; */
+    font-size: 15px;
+  }
+  .custom-h2 {
+    @apply font-[15px];
+  }
+}
